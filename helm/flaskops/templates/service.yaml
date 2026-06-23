@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: flaskops-service
+  namespace: production
+  labels:
+    {{- include "flaskops.labels" . | nindent 4 }}
+spec:
+  type: ClusterIP
+  selector:
+    {{- include "flaskops.selectorLabels" . | nindent 4 }}
+  ports:
+  - name: http
+    port: {{ .Values.service.port }}
+    targetPort: {{ .Values.service.targetPort }}
