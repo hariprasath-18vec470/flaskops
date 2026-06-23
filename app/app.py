@@ -2,7 +2,7 @@ import logging
 import os
 import time
 import random
-from flask import Flask, jsonify
+from flask import Flask
 from prometheus_flask_exporter import PrometheusMetrics
 from prometheus_client import Counter, Histogram, Gauge
 
