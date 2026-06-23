@@ -20,9 +20,10 @@ def test_index(client):
     assert client.get('/').get_json()['app'] == 'FlaskOps'
 
 def test_orders(client):
-    r = client.post('/orders', json={'item':'laptop'})
+    r = client.post('/orders', json={'item': 'laptop'})
     assert r.status_code in [201, 500]
 
 def test_metrics(client):
     r = client.get('/metrics')
     assert r.status_code == 200
+    assert b'flask' in r.data or b'# HELP' in r.data

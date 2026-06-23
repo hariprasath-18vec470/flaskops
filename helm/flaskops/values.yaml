@@ -1,7 +1,7 @@
 image:
-  repository: flaskops
+  repository: hariprasathshanmugaraj/flaskops
   tag: "latest"
-  pullPolicy: Never
+  pullPolicy: IfNotPresent
 
 replicaCount: 1
 
