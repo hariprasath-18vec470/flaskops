@@ -1,6 +1,6 @@
 image:
   repository: hariprasathshanmugaraj/flaskops
-  tag: "latest"
+  tag: "sha-94ba5a5"
   pullPolicy: IfNotPresent
 
 replicaCount: 1
